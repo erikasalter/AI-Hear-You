@@ -1,0 +1,4 @@
+Name,email,password,role
+Erika,example@gmail.com,password1,developer
+Matteo,example1@gmail.com,password2,instructor
+Bob,example2@gmail.com,password3,student
