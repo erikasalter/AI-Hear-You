@@ -1,5 +1,22 @@
-@startuml "Class_Diagram"
+@startuml "Class_UML"
 
-class Temp {}
+
+
+DatabaseController ^.. UserDataController: <<extends>>
+
+abstract class DatabaseController {
+    - fileName: String
+    + DatabaseController(fileName: String)
+    + initDatabase(fileName: String): void
+    # <i>loadFromFile()</i>: void
+    + closeDatabase(): void
+    + restartDatabase(): void
+}
+
+class UserDataController {
+    + UserDataController(fileName: String)
+    + UserDataController()
+    # loadFromFile(fileName: String): void
+}
 
 @enduml

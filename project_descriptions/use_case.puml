@@ -1,4 +1,4 @@
-@startuml "Use Case Diagram"
+@startuml "Use_Case_Diagram"
 left to right direction
 
 Actor Student
