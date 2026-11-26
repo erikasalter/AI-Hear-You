@@ -1,0 +1,35 @@
+@startuml "Use Case Diagram"
+left to right direction
+
+Actor Student
+Actor Instructor
+
+rectangle "System" {
+    "Verify Lecture In Session" as (inSession)
+
+    "Start Lecture" as (Lecture)
+
+    "Start Transcription" as (Start)
+    "End Transcription" as (End)
+    "Request Summary" as (Summary)
+
+    "Ask Question" as (Ask)
+    "Raise Hand" as (Raise)
+}
+
+Instructor -- Lecture
+Instructor -- Start
+Instructor -- End
+Instructor -- Summary
+
+Student -- Summary
+Student -- Ask
+Student -- Raise
+
+Start ..> inSession: <<extends>>
+Summary ..> inSession : <<extends>>
+Raise ..> inSession: <<extends>>
+Ask ..> inSession: <<extends>>
+
+
+@enduml
