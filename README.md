@@ -7,4 +7,4 @@
 - Summary feature
 
 ### Use-Case Diagram
-![Use_Case_Diagram](project_descriptions/out/use_case/UseCaseDiagram.png)
+![Use_Case_Diagram](project_descriptions/out/use_case/Use Case Diagram.png)

@@ -6,6 +6,11 @@ Actor Instructor
 
 rectangle "System" {
     "Verify Lecture In Session" as (inSession)
+    "Verify Login" as (isUsername)
+    "Verify Registration" as (isNotUsername)
+
+    "Log In" as (Login)
+    "Register" as (Register)
 
     "Start Lecture" as (Lecture)
 
@@ -21,15 +26,21 @@ Instructor -- Lecture
 Instructor -- Start
 Instructor -- End
 Instructor -- Summary
+Instructor -- Login
+Instructor -- Register
 
 Student -- Summary
 Student -- Ask
 Student -- Raise
+Student -- Login
+Instructor -- Register
 
 Start ..> inSession: <<extends>>
 Summary ..> inSession : <<extends>>
 Raise ..> inSession: <<extends>>
 Ask ..> inSession: <<extends>>
+Login ..> isUsername: <<extends>>
+Register ..> isNotUsername: <<extends>>
 
 
 @enduml
